@@ -22,16 +22,21 @@ def guestion(questi,succeful_answer):
         print("My name is" + name + ", ты + 10 баллов получил!")
         counter = counter + 10
         сounter_answer = сounter_answer + 1
-        counter_proc = counter_proc + 33
     else:
         print("Ошибочка, ты, не заработал 10 баллов ")
     return
+
 
 
 guestion("My name __ " + name, succeful_first_answer)
 guestion("I ___ a coder.", succeful_second_answer)
 guestion("I live __ Moscow", succeful_third_answer)
 
+
+one_answer_in_proc = 100.0 / float(сounter_answer)
+counter_proc = one_answer_in_proc * сounter_answer
+
+print()
 
 if сounter_answer == 1:
     answerov = ' вопрос'
