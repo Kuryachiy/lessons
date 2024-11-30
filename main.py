@@ -7,7 +7,7 @@ counter_proc = 0
 print("Привет! Предлагаю проверить свои знания английского!Напиши, как тебя зовут?")
 name = input()
 
-def guestion(questi,succeful_answer):
+def guestion(questi:str,succeful_answer:str):
     global counter
     global сounter_answer
     global counter_proc
@@ -28,9 +28,12 @@ def guestion(questi,succeful_answer):
 
 
 
-guestion("My name __ " + name, succeful_first_answer)
-guestion("I ___ a coder.", succeful_second_answer)
-guestion("I live __ Moscow", succeful_third_answer)
+answers = [succeful_first_answer, succeful_second_answer, succeful_third_answer]
+questions = ["My name __ ", "I ___ a coder.", "I live __ Moscow"]
+
+for index, velue in enumerate(questions):
+    guestion(velue,answers[index])
+
 
 
 one_answer_in_proc = 100.0 / float(сounter_answer)
